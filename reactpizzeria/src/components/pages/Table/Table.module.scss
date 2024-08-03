@@ -1,0 +1,45 @@
+@import '../../../styles/settings.scss';
+
+.maincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: ($base-size * 2);
+}
+.tableinfocontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: ($app-width * 0.75);
+    font-size: ($base-size * 2);
+}
+
+.tabletitlecontainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    border-bottom: solid 1px lightgrey;
+    margin-bottom: $base-size;
+}
+
+.tabletitle{
+    font-weight: 600;
+    font-size: 1.3em;
+}
+.buttoncontainer{
+    margin-top: $base-size * 2;
+}
+.updatebutton{
+    text-decoration: none;
+    font-weight: 300;
+    background-color: $color-dark;
+    border-radius: $radius;
+    padding: $base-size*0.5 $base-size * 1.5;
+    color: $color-light;
+    transition: $transition;
+}
+.updatebutton:hover{
+    color: $color-warning;
+}

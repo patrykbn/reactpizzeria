@@ -1,0 +1,9 @@
+@import '../../../styles/settings.scss';
+
+.notfound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: ($base-size * 3) 0 ($base-size * 3) 0;
+}

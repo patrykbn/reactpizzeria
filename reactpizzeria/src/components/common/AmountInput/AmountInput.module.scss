@@ -1,0 +1,11 @@
+@import '../../../styles/settings.scss';
+
+.input {
+    font-size: $base-size*1.7;
+    width: $base-size*4.5;
+    height: $base-size*1.3;
+    padding: $base-size*0.5 $base-size*0.25 $base-size*0.1 $base-size*0.25;
+    margin: 0 $base-size;
+    border: solid 1px lightgray;
+    border-radius: $radius;
+}

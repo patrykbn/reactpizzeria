@@ -1,0 +1,8 @@
+@import '../../../styles/settings.scss';
+.peoplecontainer{
+    margin: $base-size 0;
+}
+.people{
+    font-weight: 500;
+    padding-right: $base-size*2.5;
+}

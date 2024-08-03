@@ -1,0 +1,16 @@
+@import '../../../styles/settings.scss';
+
+.select {
+  max-width: 150px;
+  background: rgb(247, 247, 247);
+  border: 1px solid lighten($color-dark, 60%);
+  padding: $base-size*0.6 ($base-size * 1.5);
+  margin: $base-size*0.2;
+  font-family: $font-text;
+  border-radius: $radius;
+  font-size: 0.9em;
+  transition: $transition;
+}
+.select:hover{
+    background: rgb(224, 224, 224);
+}

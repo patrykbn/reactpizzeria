@@ -1,0 +1,43 @@
+@import '../../../styles/settings.scss';
+
+.tablerow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+.tableinfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .table{
+        font-size: ($base-size * 1.8);
+        font-weight: 550;
+        padding-right: ($base-size * 1.8);
+    }
+    .status{
+        font-size: ($base-size * 1.2);
+        font-weight: 550;
+        padding-right: ($base-size * 0.5);
+    }
+    .currentstatus{
+        font-size: ($base-size * 1.2);
+        font-weight: 350;
+    }
+    .morebutton{
+        text-decoration: none;
+        color: $color-light;
+        font-size: ($base-size * 1.2);
+        background-color: $color-dark;
+        padding: ($base-size * 0.65) $base-size ($base-size * 0.65) $base-size;
+        border-radius: $radius;
+    }
+}
+.bill{
+    font-size: ($base-size * 1.2);
+    font-weight: 550;
+    padding-right: ($base-size * 0.5);
+    padding-left: ($base-size * 3);
+}

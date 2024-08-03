@@ -1,0 +1,14 @@
+@import '../../../styles/settings.scss';
+
+.billcontainer{
+    margin: $base-size 0;
+}
+
+.bill{
+    font-weight: 500;
+    padding-right: $base-size*6;
+}
+
+.dollarsign{
+    font-weight: 400;
+}

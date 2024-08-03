@@ -1,0 +1,32 @@
+@import '../../../styles/settings.scss';
+
+.appwindow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.appcontainer{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: $app-width;
+    padding: ($base-size * 2) 0 ($base-size * 0.5) 0;
+    .apptitle{
+        font-size: ($base-size * 2.5);
+        font-weight: 500;
+        padding-left: $base-size;
+    }
+}
+.tablescontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $app-width;
+    ul{
+        list-style-type: none;
+        width: 100%;
+        margin: 0;
+        padding: 0 $base-size $base-size $base-size;
+    }
+}
