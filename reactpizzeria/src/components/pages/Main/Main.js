@@ -1,11 +1,17 @@
 import styles from './Main.module.scss';
-import { getAllTables } from '../../../redux/tablesRedux';
-import { useSelector } from 'react-redux';
+import { fetchTablesThunk, getAllTables } from '../../../redux/tablesRedux';
+import { useDispatch, useSelector } from 'react-redux';
 import Tablerow from '../../common/Tablerow/Tablerow';
+import { useEffect } from 'react';
 
 const Main = () => {
 
-    const tables = useSelector(state => getAllTables(state))
+    const dispatch = useDispatch();
+    const tables = useSelector(state => getAllTables(state));
+
+    useEffect(() => {
+        dispatch(fetchTablesThunk());
+    }, [dispatch]);
 
     return (
         <div className={styles.appwindow}>

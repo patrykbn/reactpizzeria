@@ -8,9 +8,13 @@ export const handleUpdate = (e, table, status, currentPeople, peopleMax, bill, d
         return;
     }
 
-    if(currentPeople > peopleMax) {
-        window.alert('Exceded maximum people currently at the table');
+    if(peopleMax > 10) {
+        peopleMax = 10;
         return;
+    }
+
+    if (currentPeople > peopleMax) {
+        currentPeople = peopleMax;
     }
 
     const updatedTable = {
@@ -33,22 +37,29 @@ export const handleStatusChange = (value, setStatus, setCurrentPeople, setBill) 
     }
 };
 
-export const handleCurrentPeopleChange = ( value, setCurrentPeople, setStatus) => {
-    if (isNaN(value)) {  
+export const handleCurrentPeopleChange = ( value, setCurrentPeople, setStatus, peopleMax) => {
+    if (isNaN(value) || value === '') {  
         setCurrentPeople(0) 
-    } else if (value >= 1 ) {
-        setCurrentPeople(value);
+    } else if (value >= 1 && value <=10) {
+        if (value > peopleMax){
+        setCurrentPeople(peopleMax);
         setStatus('Busy')
+        } else {
+            setCurrentPeople(value);
+            setStatus('Busy')
+        }
     } else {
-        setCurrentPeople(value);
+        setCurrentPeople(10);
     }
 };
 
 export const handlePeopleMaxChange = (value, setPeopleMax) => {
     if (isNaN(value) || value < 1) {
         setPeopleMax(2)
-    } else {
-    setPeopleMax(parseInt(value));
+    } else if (value > 10) {
+        setPeopleMax(10)
+    }else {
+        setPeopleMax(parseInt(value));
     }
 };
 

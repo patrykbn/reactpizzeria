@@ -1,22 +1,18 @@
-import { legacy_createStore as createStore } from 'redux';
-import { combineReducers, compose, applyMiddleware } from 'redux';
+import { legacy_createStore as createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import initialState from './initialState';
 import tablesReducer from './tablesRedux';
+import initialState from './initialState';
 
-const subreducers = {
+const rootReducer = combineReducers({
   tables: tablesReducer,
-};
+});
 
-const reducer = combineReducers(subreducers);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const store = createStore(
-  reducer,
+  rootReducer,
   initialState,
-  compose(
-    applyMiddleware(thunk),
-    window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
-  ),
+  composeEnhancers(applyMiddleware(thunk))
 );
-console.log('Store initial state:', store.getState());
 
 export default store;
